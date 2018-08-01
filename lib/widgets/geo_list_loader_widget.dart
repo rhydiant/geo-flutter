@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:geo/models/geo_location.dart';
@@ -53,7 +56,12 @@ class GeoListLoaderState extends State<GeoListLoader>
             animationController: animationController,
           );
         } else {
-          return Center(child: CircularProgressIndicator());
+          return Center(
+              child: (Platform.isIOS)
+                  ? CupertinoActivityIndicator(
+                      radius: 10.0,
+                    )
+                  : CircularProgressIndicator());
         }
       },
     ));

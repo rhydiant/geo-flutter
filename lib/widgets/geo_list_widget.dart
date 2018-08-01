@@ -50,12 +50,14 @@ class GeoList extends StatelessWidget {
             ),
           ],
         ),
-        body: ListView.builder(itemBuilder: (context, index) {
-          return GeoListItem(
-            location: locations[index],
-            imageName: 'assets/images/location-$index.jpg',
-          );
-        }),
+        body: ListView.builder(
+            itemCount: locations.length,
+            itemBuilder: (context, index) {
+              return GeoListItem(
+                location: locations[index],
+                imageName: 'assets/images/location-$index.jpg',
+              );
+            }),
       ),
     );
   }
