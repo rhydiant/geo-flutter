@@ -5,7 +5,7 @@ import 'models/geo_keys.dart';
 import 'widgets/geo_app_widget.dart';
 
 ///
-/// App entry point
+/// App entry point, see [GeoApp]
 ///
 
 void main() {
