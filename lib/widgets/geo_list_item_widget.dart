@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:geo/widgets/geo_rating.dart';
 
 import 'geo_detail_widget.dart';
-import 'geo_map_image_widget.dart';
 
 import '../models/geo_location.dart';
 import '../models/geo_layout.dart';
+import '../models/geo_colors.dart';
 
 ///
 /// Renders an individual location list item
@@ -12,11 +13,11 @@ import '../models/geo_layout.dart';
 
 class GeoListItem extends StatelessWidget {
   final GeoLocation location;
+  final String imageName;
 
-  const GeoListItem({
-    Key key,
-    @required this.location,
-  }) : super(key: key);
+  const GeoListItem(
+      {Key key, @required this.location, @required this.imageName})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,57 +28,53 @@ class GeoListItem extends StatelessWidget {
         }));
       },
       child: Card(
+        elevation: 3.0,
         margin: EdgeInsets.only(
-            top: standardHalfPadding,
+            top: standardPadding,
             bottom: standardHalfPadding,
-            left: standardHalfPadding,
-            right: standardHalfPadding),
+            left: standardPadding,
+            right: standardPadding),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            Container(
+                child: Image(
+              image: AssetImage(imageName),
+            )),
+            Padding(
+              padding: EdgeInsets.only(
+                left: standardPadding,
+                top: standardPadding,
+                bottom: standardHalfPadding,
+              ),
+              child: Text(
+                '${location.name}',
+                style: TextStyle(
+                  fontSize: 17.0,
+                  color: GeoColors.black,
+                ),
+              ),
+            ),
             Row(
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Icon(Icons.map),
-                ),
-                Expanded(
-                  child: Text(
-                    '${location.name}',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18.0,
-                    ),
-                  ),
+                  padding: EdgeInsets.only(
+                      left: standardPadding,
+                      bottom: standardPadding,
+                      right: 4.0),
+                  child: Rating(score: 2),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(right: standardHalfPadding),
+                  padding: EdgeInsets.only(left: 0.0, bottom: standardPadding),
                   child: Text(
-                    '${location.distance}km',
+                    '• ${location.distance} KM NEARBY',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 22.0,
-                      color: Colors.deepOrangeAccent,
+                      fontSize: 11.0,
+                      color: GeoColors.darkGrey,
                     ),
                   ),
-                ),
+                )
               ],
-            ),
-            Container(
-              padding: EdgeInsets.only(
-                  left: standardHalfPadding,
-                  right: standardHalfPadding,
-                  bottom: standardHalfPadding),
-              child: Text(
-                '${location.region}, ${location.state}',
-              ),
-            ),
-            Container(
-              child: GeoMapImage(
-                lat: location.lat,
-                long: location.long,
-                height: 180.0,
-              ),
             )
           ],
         ),

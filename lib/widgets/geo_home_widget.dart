@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:geo/models/geo_colors.dart';
 
 import 'geo_list_loader_widget.dart';
 
@@ -38,27 +39,33 @@ class _GeoHomeState extends State<GeoHome> {
         },
         items: [
           BottomNavigationBarItem(
-            title: Text(
-              'nearby',
-            ),
-            icon: Icon(
-              Icons.list,
-            ),
-          ),
-          BottomNavigationBarItem(
-            title: Text(
-              'discover',
-            ),
-            icon: Icon(
-              Icons.map,
+            title: Container(child: Text(''), height: 0.0),
+            icon: Container(
+              padding: EdgeInsets.only(top: 10.0),
+              child: ImageIcon(
+                AssetImage('assets/icons/map-normal.png'),
+                color: GeoColors.black,
+              ),
             ),
           ),
           BottomNavigationBarItem(
-            title: Text(
-              'profile',
+            title: Container(child: Text(''), height: 0.0),
+            icon: Container(
+              padding: EdgeInsets.only(top: 10.0),
+              child: ImageIcon(
+                AssetImage('assets/icons/discover-normal.png'),
+                color: GeoColors.black,
+              ),
             ),
-            icon: Icon(
-              Icons.person,
+          ),
+          BottomNavigationBarItem(
+            title: Container(child: Text(''), height: 0.0),
+            icon: Container(
+              padding: EdgeInsets.only(top: 10.0),
+              child: ImageIcon(
+                AssetImage('assets/icons/profile-normal.png'),
+                color: GeoColors.black,
+              ),
             ),
           ),
         ],

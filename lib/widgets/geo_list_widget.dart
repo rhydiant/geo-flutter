@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:geo/models/geo_colors.dart';
 
 import '../models/geo_location.dart';
 import 'geo_list_item_widget.dart';
@@ -24,33 +25,36 @@ class GeoList extends StatelessWidget {
         parent: animationController,
         curve: Curves.easeOut,
       ),
-      child: CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            pinned: true,
-            elevation: 0.5,
-            expandedHeight: 200.0,
-            flexibleSpace: FlexibleSpaceBar(
-              title: Text('nearby'),
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'Discover',
+            style: TextStyle(color: GeoColors.black),
+          ),
+          elevation: 0.5,
+          leading: IconButton(
+            icon: ImageIcon(
+              AssetImage('assets/icons/menu.png'),
+              color: GeoColors.black,
             ),
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(Icons.adjust),
-                onPressed: () {},
+            onPressed: () {},
+          ),
+          actions: <Widget>[
+            IconButton(
+              icon: ImageIcon(
+                AssetImage('assets/icons/funnel.png'),
+                color: GeoColors.black,
               ),
-            ],
-          ),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                return GeoListItem(
-                  location: locations[index],
-                );
-              },
-              childCount: locations.length,
+              onPressed: () {},
             ),
-          ),
-        ],
+          ],
+        ),
+        body: ListView.builder(itemBuilder: (context, index) {
+          return GeoListItem(
+            location: locations[index],
+            imageName: 'assets/images/location-$index.jpg',
+          );
+        }),
       ),
     );
   }
