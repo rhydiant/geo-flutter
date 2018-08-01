@@ -22,8 +22,6 @@ class GeoApp extends StatelessWidget {
 ///
 
 ThemeData _buildGeoTheme() {
-  final ThemeData base = ThemeData.light();
-  return base.copyWith(
-    primaryColor: Colors.white,
-  );
+  final ThemeData base = ThemeData(fontFamily: 'Montserrat');
+  return base;
 }
