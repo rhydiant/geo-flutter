@@ -21,38 +21,46 @@ class GeoHeroHeader extends StatelessWidget {
             image: AssetImage(imageName),
           ),
         ),
-        Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.transparent,
-                Colors.white,
-              ],
-              stops: [0.5, 1.0],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              tileMode: TileMode.repeated,
+        _GeoGradient(),
+        Positioned(
+          child: SafeArea(
+            child: IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
           ),
         ),
-        Positioned(
-            child: SafeArea(
-          child: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-        )),
-        // Positioned(
-        //   left: standardPadding,
-        //   bottom: standardPadding,
-        //   child: Text('$title',
-        //       style: TextStyle(
-        //         fontSize: 21.0,
-        //       )),
-        // ),
       ],
+    );
+  }
+}
+
+///
+/// Renders a simple gradient for [GeoHeroHeader]s
+///
+
+class _GeoGradient extends StatelessWidget {
+  const _GeoGradient({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Colors.transparent,
+            Colors.white,
+          ],
+          stops: [0.5, 1.0],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          tileMode: TileMode.repeated,
+        ),
+      ),
     );
   }
 }

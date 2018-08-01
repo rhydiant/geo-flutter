@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:geo/models/geo_colors.dart';
 
 import 'package:geo/widgets/geo_drawer_widget.dart';
@@ -36,12 +35,8 @@ class _GeoHomeState extends State<GeoHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: GeoColors.black,
-        ),
         title: Text(
           _titles[_currentIndex],
-          style: TextStyle(color: GeoColors.black),
         ),
         elevation: 0.5,
         actions: _currentIndex == 0
@@ -49,7 +44,6 @@ class _GeoHomeState extends State<GeoHome> {
                 IconButton(
                   icon: Icon(
                     Icons.search,
-                    color: GeoColors.black,
                   ),
                   onPressed: () {
                     Navigator
@@ -93,10 +87,7 @@ class _GeoHomeState extends State<GeoHome> {
             title: Container(child: Text(''), height: 0.0),
             icon: Container(
               padding: EdgeInsets.only(top: 10.0),
-              child: Icon(
-                Icons.photo,
-                color: GeoColors.black,
-              ),
+              child: Icon(Icons.photo, color: GeoColors.black),
             ),
           ),
           BottomNavigationBarItem(

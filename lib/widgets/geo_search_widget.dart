@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:geo/models/geo_colors.dart';
-
 ///
 /// Renders a search form
 ///
@@ -11,7 +9,6 @@ class GeoSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.tealAccent,
         elevation: 0.5,
         title: Text('Filters'),
       ),
@@ -27,8 +24,6 @@ class GeoSearch extends StatelessWidget {
                   top: 16.0,
                   bottom: 16.0,
                 ),
-                color: GeoColors.primary,
-                textColor: Colors.white,
                 child: Text(
                   'Apply Filters',
                   style: TextStyle(fontWeight: FontWeight.bold),
