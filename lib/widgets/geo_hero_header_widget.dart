@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:geo/models/geo_layout.dart';
+///
+/// Renders a flexible image header
+///
 
 class GeoHeroHeader extends StatelessWidget {
   final String title;

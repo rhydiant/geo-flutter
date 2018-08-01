@@ -5,7 +5,10 @@ import 'package:http/http.dart' as http;
 
 import 'package:geo/models/geo_location.dart';
 
+///
 /// Fetches geo based data from a JSON API
+///
+
 class GeoClient {
   Future<List<GeoLocation>> fetchLocations() async {
     print('making http request');

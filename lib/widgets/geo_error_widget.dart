@@ -15,24 +15,26 @@ class GeoError extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text(
-          "Failed to load locations",
-          textDirection: TextDirection.ltr,
-          textAlign: TextAlign.center,
-        ),
-        Container(
-          margin: EdgeInsets.all(standardPadding),
-          child: RaisedButton(
-            child: Text('retry'),
-            onPressed: () {
-              action();
-            },
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            "Failed to load locations",
+            textDirection: TextDirection.ltr,
+            textAlign: TextAlign.center,
           ),
-        ),
-      ],
+          Container(
+            margin: EdgeInsets.all(standardPadding),
+            child: RaisedButton(
+              child: Text('retry'),
+              onPressed: () {
+                action();
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

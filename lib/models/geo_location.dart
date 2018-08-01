@@ -1,4 +1,7 @@
+///
 /// Represents a geographical location
+///
+
 class GeoLocation {
   final String name;
   final double long;

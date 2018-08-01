@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:geo/models/geo_colors.dart';
 import 'package:geo/models/geo_location.dart';
-
 import 'package:geo/widgets/geo_list_item_widget.dart';
 
 ///
@@ -11,54 +9,53 @@ import 'package:geo/widgets/geo_list_item_widget.dart';
 /// Each list item is rendered using the [GeoListItem] widget
 ///
 
-class GeoList extends StatelessWidget {
+class GeoList extends StatefulWidget {
   final List<GeoLocation> locations;
-  final animationController;
 
-  const GeoList({Key key, @required this.locations, this.animationController})
-      : super(key: key);
+  GeoList({Key key, @required this.locations}) : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() => GeoListState();
+}
+
+class GeoListState extends State<GeoList> with TickerProviderStateMixin {
+  AnimationController animationController;
+
+  @override
+  void initState() {
+    super.initState();
+
+    animationController = new AnimationController(
+      duration: new Duration(seconds: 1),
+      vsync: this,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
+    print("building GeoListState");
     animationController.forward();
     return FadeTransition(
       opacity: CurvedAnimation(
         parent: animationController,
-        curve: Curves.easeOut,
+        curve: Curves.easeInOut,
       ),
       child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Discover',
-            style: TextStyle(color: GeoColors.black),
-          ),
-          elevation: 0.5,
-          leading: IconButton(
-            icon: ImageIcon(
-              AssetImage('assets/icons/menu.png'),
-              color: GeoColors.black,
-            ),
-            onPressed: () {},
-          ),
-          actions: <Widget>[
-            IconButton(
-              icon: ImageIcon(
-                AssetImage('assets/icons/funnel.png'),
-                color: GeoColors.black,
-              ),
-              onPressed: () {},
-            ),
-          ],
-        ),
         body: ListView.builder(
-            itemCount: locations.length,
+            itemCount: widget.locations.length,
             itemBuilder: (context, index) {
               return GeoListItem(
-                location: locations[index],
+                location: widget.locations[index],
                 imageName: 'assets/images/location-$index.jpg',
               );
             }),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
   }
 }
