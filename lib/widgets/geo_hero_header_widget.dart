@@ -42,14 +42,14 @@ class GeoHeroHeader extends StatelessWidget {
             },
           ),
         )),
-        Positioned(
-          left: standardPadding,
-          bottom: standardPadding,
-          child: Text('$title',
-              style: TextStyle(
-                fontSize: 21.0,
-              )),
-        ),
+        // Positioned(
+        //   left: standardPadding,
+        //   bottom: standardPadding,
+        //   child: Text('$title',
+        //       style: TextStyle(
+        //         fontSize: 21.0,
+        //       )),
+        // ),
       ],
     );
   }
