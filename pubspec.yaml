@@ -34,20 +34,10 @@ flutter:
   assets:
     # icons
     - assets/icons/map-normal.png
-    - assets/icons/map-normal@2x.png
-    - assets/icons/map-normal@3x.png
     - assets/icons/discover-normal.png
-    - assets/icons/discover-normal@2x.png
-    - assets/icons/discover-normal@3x.png
     - assets/icons/profile-normal.png
-    - assets/icons/profile-normal@2x.png
-    - assets/icons/profile-normal@3x.png  
     - assets/icons/menu.png
-    - assets/icons/menu@2x.png
-    - assets/icons/menu@3x.png      
     - assets/icons/funnel.png
-    - assets/icons/funnel@2x.png
-    - assets/icons/funnel@3x.png      
     # images
     - assets/images/location-0.jpg
     - assets/images/location-1.jpg
