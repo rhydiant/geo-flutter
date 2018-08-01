@@ -24,7 +24,7 @@ class GeoListItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (_) {
-          return GeoDetail(location: location);
+          return GeoDetail(location: location, imageName: imageName);
         }));
       },
       child: Card(
@@ -38,8 +38,11 @@ class GeoListItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
-                child: Image(
-              image: AssetImage(imageName),
+                child: Hero(
+              tag: imageName,
+              child: Image(
+                image: AssetImage(imageName),
+              ),
             )),
             Padding(
               padding: EdgeInsets.only(
