@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:map_view/map_view.dart';
 
 import 'package:geo/models/geo_location.dart';
 import 'package:geo/models/geo_layout.dart';
@@ -50,14 +51,52 @@ class GeoDetail extends StatelessWidget {
           ),
           Container(
             padding: EdgeInsets.all(standardPadding),
-            child: GeoMapImage(
-              long: location.long,
-              lat: location.lat,
-              height: 150.0,
+            child: Stack(
+              fit: StackFit.passthrough,
+              children: <Widget>[
+                GeoMapImage(
+                  long: location.long,
+                  lat: location.lat,
+                  height: 150.0,
+                ),
+                Positioned(
+                  bottom: 8.0,
+                  right: 8.0,
+                  child: FloatingActionButton(
+                    mini: true,
+                    onPressed: () {},
+                    child: IconButton(
+                      onPressed: () {
+                        _showMap(
+                            title: location.name,
+                            long: location.long,
+                            lat: location.lat);
+                      },
+                      icon: Icon(Icons.fullscreen),
+                    ),
+                  ),
+                )
+              ],
             ),
           )
         ],
       ),
     );
+  }
+
+  void _showMap({String title, double long, double lat}) {
+    MapView mapView = new MapView();
+    mapView.onToolbarAction.listen((id) {
+      mapView.dismiss();
+    });
+    mapView.show(
+        new MapOptions(
+          showUserLocation: true,
+          showCompassButton: true,
+          showMyLocationButton: true,
+          title: title,
+          initialCameraPosition: CameraPosition(Location(lat, long), 14.0),
+        ),
+        toolbarActions: [new ToolbarAction("Close", 1)]);
   }
 }
