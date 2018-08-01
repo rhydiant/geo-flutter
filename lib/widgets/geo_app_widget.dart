@@ -17,6 +17,10 @@ class GeoApp extends StatelessWidget {
   }
 }
 
+///
+/// Theme
+///
+
 ThemeData _buildGeoTheme() {
   final ThemeData base = ThemeData.light();
   return base.copyWith(
