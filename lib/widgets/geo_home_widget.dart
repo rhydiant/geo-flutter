@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:geo/models/geo_colors.dart';
 
-import 'geo_list_loader_widget.dart';
+import 'package:geo/widgets/geo_list_loader_widget.dart';
 
 ///
 /// Renders the main app navigation structure (tabs).

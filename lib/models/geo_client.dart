@@ -1,9 +1,9 @@
-import 'package:http/http.dart' as http;
-
 import 'dart:async';
 import 'dart:convert';
 
-import 'geo_location.dart';
+import 'package:http/http.dart' as http;
+
+import 'package:geo/models/geo_location.dart';
 
 /// Fetches geo based data from a JSON API
 class GeoClient {

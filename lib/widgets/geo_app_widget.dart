@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:geo/models/geo_colors.dart';
 
-import 'geo_home_widget.dart';
+import 'package:geo/widgets/geo_home_widget.dart';
 
 ///
 /// Root app widget rendering core scaffold

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:map_view/map_view.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-import '../models/geo_keys.dart';
+import 'package:geo/models/geo_keys.dart';
 
 ///
 /// Renders an image of a map, centered at the given coordinates.

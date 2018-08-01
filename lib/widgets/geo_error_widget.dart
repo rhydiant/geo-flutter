@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../models/geo_layout.dart';
+import 'package:geo/models/geo_layout.dart';
 
 ///
 /// Renders an error message with a retry option.

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:geo/models/geo_colors.dart';
 
-import '../models/geo_location.dart';
-import 'geo_list_item_widget.dart';
+import 'package:geo/models/geo_colors.dart';
+import 'package:geo/models/geo_location.dart';
+
+import 'package:geo/widgets/geo_list_item_widget.dart';
 
 ///
 /// Renders a [ListView] of locations

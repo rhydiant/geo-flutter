@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../models/geo_location.dart';
-import '../models/geo_client.dart';
+import 'package:geo/models/geo_location.dart';
+import 'package:geo/models/geo_client.dart';
 
-import 'geo_list_widget.dart';
-import 'geo_error_widget.dart';
+import 'package:geo/widgets/geo_list_widget.dart';
+import 'package:geo/widgets/geo_error_widget.dart';
 
 ///
 /// Renders a progress indicator while loading locations.

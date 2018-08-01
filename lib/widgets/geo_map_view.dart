@@ -1,9 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'package:map_view/map_view.dart';
 import 'package:location/location.dart' as ExtLocation;
-
-import 'dart:async';
 
 /// Renders a static map view
 class GeoMapView extends StatefulWidget {
