@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:geo/models/geo_layout.dart';
 
-class HeroHeader extends StatelessWidget {
+class GeoHeroHeader extends StatelessWidget {
   final String title;
   final String imageName;
 
-  const HeroHeader({Key key, @required this.title, @required this.imageName})
+  const GeoHeroHeader({Key key, @required this.title, @required this.imageName})
       : super(key: key);
 
   @override

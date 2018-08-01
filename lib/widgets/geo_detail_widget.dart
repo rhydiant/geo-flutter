@@ -25,7 +25,7 @@ class GeoDetail extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          HeroHeader(
+          GeoHeroHeader(
             title: location.name,
             imageName: imageName,
           ),

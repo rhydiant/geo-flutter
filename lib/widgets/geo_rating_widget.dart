@@ -6,10 +6,10 @@ import 'package:geo/models/geo_colors.dart';
 /// Renders a star (bullet) rating out of 5
 ///
 
-class Rating extends StatelessWidget {
+class GeoRating extends StatelessWidget {
   final int score;
 
-  const Rating({Key key, @required this.score}) : super(key: key);
+  const GeoRating({Key key, @required this.score}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
