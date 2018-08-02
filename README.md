@@ -2,7 +2,7 @@
 
 A time-boxed evaluation of flutter.io, building out an iOS/Android app.
 
-<img src="https://giphy.com/gifs/9LXMkyU5v37w4x2LD2" width="242" height="480"/>
+<img src="https://thumbs.gfycat.com/SecondaryGratefulAmphiuma-size_restricted.gif" width="200">
 
 Using [harmony-ui-kit-sketch-freebie](https://www.sketchappsources.com/free-source/2657-harmony-ui-kit-sketch-freebie-resource.html) as the design spec and a [sandboxed API](https://getsandbox.com/sandboxes/willyweather-stub).
 
