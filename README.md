@@ -20,3 +20,13 @@ Start a [simulator](https://github.com/rhydiant/geo-flutterio/wiki/Simulators) a
 To run on a device (with release optimizations):
 
     flutter run --release
+
+### Running tests
+
+Unit and widgets tests run with:
+
+    flutter test
+    
+(WIP) Integration tests run with:
+
+    flutter drive --target=test_driver/launcher.dart 
