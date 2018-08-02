@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 import 'package:geo/models/geo_location.dart';
 import 'package:geo/models/geo_client.dart';
@@ -21,7 +22,7 @@ class GeoListLoader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder<List<GeoLocation>>(
-        future: geoClient.fetchLocations(),
+        future: geoClient.fetchLocations(http.Client()),
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return GeoError(

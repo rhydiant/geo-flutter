@@ -17,4 +17,8 @@ class GeoLocation {
   String toString() {
     return 'GeoLocation name: $name, long: $long, lat: $lat, distance: $distance region: $region, state: $state';
   }
+
+  String distanceDescription() {
+    return '${distance}Km';
+  }
 }

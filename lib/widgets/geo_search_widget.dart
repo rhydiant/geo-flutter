@@ -25,7 +25,7 @@ class GeoSearch extends StatelessWidget {
                   bottom: 16.0,
                 ),
                 child: Text(
-                  'Apply Filters',
+                  'Apply',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 onPressed: () {
