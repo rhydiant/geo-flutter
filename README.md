@@ -2,9 +2,9 @@
 
 A time-boxed evaluation of flutter.io, building out an iOS/Android app.
 
-<img src="https://thumbs.gfycat.com/SecondaryGratefulAmphiuma-size_restricted.gif" width="200">
+<img src="https://thumbs.gfycat.com/RectangularTidyKinkajou-size_restricted.gif" width="200">
 
-Using [harmony-ui-kit-sketch-freebie](https://www.sketchappsources.com/free-source/2657-harmony-ui-kit-sketch-freebie-resource.html) as the design spec and a [sandboxed API](https://getsandbox.com/sandboxes/willyweather-stub).
+Based on [harmony-ui-kit-sketch-freebie](https://www.sketchappsources.com/free-source/2657-harmony-ui-kit-sketch-freebie-resource.html) as the design spec and a [sandboxed API](https://getsandbox.com/sandboxes/willyweather-stub).
 
 See [Wiki](https://github.com/rhydiant/geo-flutterio/wiki) for more.
 
