@@ -14,15 +14,17 @@ class GeoHeroHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      fit: StackFit.expand,
       children: <Widget>[
         Hero(
           tag: imageName,
           child: Image(
+            fit: BoxFit.cover,
             image: AssetImage(imageName),
           ),
         ),
-        _GeoGradient(),
         Positioned(
+          top: 16.0,
           child: SafeArea(
             child: IconButton(
               icon: Icon(Icons.arrow_back),
@@ -33,34 +35,6 @@ class GeoHeroHeader extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-}
-
-///
-/// Renders a simple gradient for [GeoHeroHeader]s
-///
-
-class _GeoGradient extends StatelessWidget {
-  const _GeoGradient({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Colors.transparent,
-            Colors.white,
-          ],
-          stops: [0.5, 1.0],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          tileMode: TileMode.repeated,
-        ),
-      ),
     );
   }
 }

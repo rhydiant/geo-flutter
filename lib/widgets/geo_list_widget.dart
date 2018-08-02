@@ -46,7 +46,6 @@ class GeoListState extends State<GeoList> with TickerProviderStateMixin {
             itemBuilder: (context, index) {
               return GeoListItem(
                 location: widget.locations[index],
-                imageName: 'assets/images/location-$index.jpg',
               );
             }),
       ),

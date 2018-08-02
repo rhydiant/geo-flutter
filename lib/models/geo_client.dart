@@ -21,6 +21,7 @@ class GeoClient {
 
       final List<GeoLocation> result = [];
 
+      int i = 0;
       for (var entry in decoded['swell']) {
         result.add(GeoLocation(
             name: entry['name'],
@@ -28,7 +29,9 @@ class GeoClient {
             long: entry['lng'],
             distance: entry['distance'].toDouble(),
             region: entry['region'],
-            state: entry['state']));
+            state: entry['state'],
+            imageUrl: 'assets/images/location-$i.jpg'));
+        i++;
       }
 
       return result;

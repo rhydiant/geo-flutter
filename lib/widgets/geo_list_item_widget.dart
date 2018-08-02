@@ -12,18 +12,15 @@ import 'package:geo/widgets/geo_detail_widget.dart';
 
 class GeoListItem extends StatelessWidget {
   final GeoLocation location;
-  final String imageName;
 
-  const GeoListItem(
-      {Key key, @required this.location, @required this.imageName})
-      : super(key: key);
+  const GeoListItem({Key key, @required this.location}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (_) {
-          return GeoDetail(location: location, imageName: imageName);
+          return GeoDetail(location: location);
         }));
       },
       child: Card(
@@ -38,9 +35,9 @@ class GeoListItem extends StatelessWidget {
           children: <Widget>[
             Container(
                 child: Hero(
-              tag: imageName,
+              tag: location.imageUrl,
               child: Image(
-                image: AssetImage(imageName),
+                image: AssetImage(location.imageUrl),
               ),
             )),
             Padding(
