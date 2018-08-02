@@ -14,6 +14,7 @@ class GeoRating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      textDirection: TextDirection.ltr,
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
         _Circle(active: score > 0),
@@ -25,6 +26,7 @@ class GeoRating extends StatelessWidget {
           padding: EdgeInsets.only(left: 4.0),
           child: Text(
             '$score.0/5.0',
+            textDirection: TextDirection.ltr,
             style: TextStyle(
               fontSize: 11.0,
               fontWeight: FontWeight.w400,
@@ -46,6 +48,9 @@ class _Circle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: active
+          ? Key('GeoRating._Circle.Active.Key')
+          : Key('GeoRating._Circle.Inactive.Key'),
       margin: EdgeInsets.all(3.0),
       width: size,
       height: size,
