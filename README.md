@@ -19,7 +19,7 @@ Install dependencies with:
 
 Start a [simulator](https://github.com/rhydiant/geo-flutterio/wiki/Simulators) and do `flutter run`.
 
-To run on a device (with release optimizations):
+To run on a connected device (with release optimizations):
 
     flutter run --release
 
