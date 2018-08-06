@@ -13,6 +13,7 @@ before_script:
   - git clone https://github.com/flutter/flutter.git -b beta
   - ./flutter/bin/flutter doctor
   - gem install coveralls-lcov
+  - touch assets/key.json
 script:
   - ./flutter/bin/flutter analyze
   - ./flutter/bin/flutter test --coverage test/unit/* test/widget/*
