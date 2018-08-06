@@ -27,7 +27,6 @@ analyzer:
     todo: ignore
   exclude:
     - 'flutter/**'
-    - 'lib/widgets/geo_list_item_widget.dart'
 
 linter:
   rules:

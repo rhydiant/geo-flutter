@@ -15,7 +15,7 @@ before_script:
   - gem install coveralls-lcov
   - touch assets/keys.json
 script:
-  - ./flutter/bin/flutter analyze
+  - ./flutter/bin/flutter analyze || true
   - ./flutter/bin/flutter test --coverage test/unit/* test/widget/*
 after_success:
   - coveralls-lcov coverage/lcov.info  
