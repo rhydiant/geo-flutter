@@ -14,6 +14,8 @@ before_script:
   - ./flutter/bin/flutter doctor
 script:
   - ./flutter/bin/flutter test
+after_success:
+  - coveralls-lcov coverage/lcov.info  
 cache:
   directories:
     - $HOME/.pub-cache
