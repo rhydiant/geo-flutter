@@ -1,4 +1,4 @@
-# geo
+# geo [![Build Status](https://travis-ci.org/DiUS/geo-flutter.svg)](https://travis-ci.org/rhydiant/geo-flutter)
 
 A time-boxed evaluation of flutter.io, building out an iOS/Android app.
 
