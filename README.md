@@ -16,6 +16,12 @@ Follow the [install instructions](https://flutter.io/setup-macos/) to setup flut
 Install dependencies with:
 
     flutter package get
+    
+### API keys
+
+In order to access Google Maps API `mv assets/keys.template.json assets/keys.json` and add your own API key, which you can setup at the [Google Maps API console](https://developers.google.com/maps/documentation/maps-static/intro)
+
+### Running the app
 
 Start a [simulator](https://github.com/rhydiant/geo-flutterio/wiki/Simulators) and do `flutter run`.
 
