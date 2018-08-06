@@ -10,7 +10,7 @@ class GeoSearch extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.5,
-        title: Text('Filters'),
+        title: const Text('Filters'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -20,11 +20,11 @@ class GeoSearch extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: FlatButton(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   top: 16.0,
                   bottom: 16.0,
                 ),
-                child: Text(
+                child: const Text(
                   'Apply',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),

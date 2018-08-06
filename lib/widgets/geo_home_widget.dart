@@ -23,11 +23,11 @@ class _GeoHomeState extends State<GeoHome> {
     Center(
       child: GeoListLoader(),
     ),
-    Center(
-      child: Text('favorites tab'),
+    const Center(
+      child: const Text('favorites tab'),
     ),
-    Center(
-      child: Text('profile tab'),
+    const Center(
+      child: const Text('profile tab'),
     ),
   ];
 
@@ -42,7 +42,7 @@ class _GeoHomeState extends State<GeoHome> {
         actions: _currentIndex == 0
             ? <Widget>[
                 IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.search,
                   ),
                   onPressed: () {
@@ -84,17 +84,17 @@ class _GeoHomeState extends State<GeoHome> {
             ),
           ),
           BottomNavigationBarItem(
-            title: Container(child: Text(''), height: 0.0),
+            title: Container(child: const Text(''), height: 0.0),
             icon: Container(
-              padding: EdgeInsets.only(top: 10.0),
-              child: Icon(Icons.photo, color: GeoColors.black),
+              padding: const EdgeInsets.only(top: 10.0),
+              child: const Icon(Icons.photo, color: GeoColors.black),
             ),
           ),
           BottomNavigationBarItem(
-            title: Container(child: Text(''), height: 0.0),
+            title: Container(child: const Text(''), height: 0.0),
             icon: Container(
-              padding: EdgeInsets.only(top: 10.0),
-              child: Icon(
+              padding: const EdgeInsets.only(top: 10.0),
+              child: const Icon(
                 Icons.person,
                 color: GeoColors.black,
               ),

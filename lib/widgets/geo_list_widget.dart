@@ -12,7 +12,7 @@ import 'package:geo/widgets/geo_list_item_widget.dart';
 class GeoList extends StatefulWidget {
   final List<GeoLocation> locations;
 
-  GeoList({Key key, @required this.locations}) : super(key: key);
+  const GeoList({Key key, @required this.locations}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => GeoListState();
@@ -25,15 +25,14 @@ class GeoListState extends State<GeoList> with TickerProviderStateMixin {
   void initState() {
     super.initState();
 
-    animationController = new AnimationController(
-      duration: new Duration(seconds: 1),
+    animationController = AnimationController(
+      duration: const Duration(seconds: 1),
       vsync: this,
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    print("building GeoListState");
     animationController.forward();
     return FadeTransition(
       opacity: CurvedAnimation(
@@ -43,7 +42,7 @@ class GeoListState extends State<GeoList> with TickerProviderStateMixin {
       child: Scaffold(
         body: ListView.builder(
             itemCount: widget.locations.length,
-            itemBuilder: (context, index) {
+            itemBuilder: (BuildContext context, int index) {
               return GeoListItem(
                 location: widget.locations[index],
               );

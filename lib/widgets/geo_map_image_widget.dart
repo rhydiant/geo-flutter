@@ -30,9 +30,9 @@ class GeoMapImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return FutureBuilder(
       future: GeoKeys.load(),
-      builder: (context, snapshot) {
+      builder: (BuildContext context, snapshot) {
         if (snapshot.hasData) {
-          final staticMapProvider = StaticMapProvider(
+          final StaticMapProvider staticMapProvider = StaticMapProvider(
             (snapshot.data as GeoKeys).googleMapsApiKey,
           );
           return Stack(
@@ -63,7 +63,7 @@ class GeoMapImage extends StatelessWidget {
                     onPressed: () {
                       _showMap(title: title, long: long, lat: lat);
                     },
-                    icon: Icon(Icons.fullscreen),
+                    icon: const Icon(Icons.fullscreen),
                   ),
                 ),
               ),
@@ -78,7 +78,7 @@ class GeoMapImage extends StatelessWidget {
 
   void _showMap({String title, double long, double lat}) {
     MapView mapView = new MapView();
-    mapView.onToolbarAction.listen((id) {
+    mapView.onToolbarAction.listen((int id) {
       mapView.dismiss();
     });
     mapView.show(
@@ -89,6 +89,6 @@ class GeoMapImage extends StatelessWidget {
           title: title,
           initialCameraPosition: CameraPosition(Location(lat, long), 14.0),
         ),
-        toolbarActions: [new ToolbarAction("Close", 1)]);
+        toolbarActions: [ToolbarAction('Close', 1)]);
   }
 }

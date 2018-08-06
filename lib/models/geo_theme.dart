@@ -12,7 +12,7 @@ class GeoTheme {
       fontFamily: 'Montserrat',
       primaryColor: Colors.white,
       primaryColorBrightness: Brightness.light,
-      primaryIconTheme: IconThemeData(
+      primaryIconTheme: const IconThemeData(
         color: GeoColors.black,
       ),
     );

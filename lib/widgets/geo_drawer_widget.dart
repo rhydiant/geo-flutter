@@ -28,25 +28,25 @@ class GeoDrawer extends StatelessWidget {
         ),
       ),
       child: ListView(
-        padding: EdgeInsets.only(top: 100.0),
+        padding: const EdgeInsets.only(top: 100.0),
         children: <Widget>[
           ListTile(
-            leading: CircleAvatar(
-              child: Icon(Icons.person),
+            leading: const CircleAvatar(
+              child: const Icon(Icons.person),
             ),
-            title: Text(
+            title: const Text(
               'Profile',
-              style: TextStyle(fontSize: 21.0),
+              style: const TextStyle(fontSize: 21.0),
             ),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
-            leading: CircleAvatar(
-              child: Icon(Icons.mail),
+            leading: const CircleAvatar(
+              child: const Icon(Icons.mail),
             ),
-            title: Text(
+            title: const Text(
               'Messages',
               style: TextStyle(fontSize: 21.0),
             ),
@@ -55,24 +55,24 @@ class GeoDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: CircleAvatar(
-              child: Icon(Icons.settings),
+            leading: const CircleAvatar(
+              child: const Icon(Icons.settings),
             ),
-            title: Text(
+            title: const Text(
               'Settings',
-              style: TextStyle(fontSize: 21.0),
+              style: const TextStyle(fontSize: 21.0),
             ),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
-            leading: CircleAvatar(
-              child: Icon(Icons.share),
+            leading: const CircleAvatar(
+              child: const Icon(Icons.share),
             ),
-            title: Text(
+            title: const Text(
               'Invite',
-              style: TextStyle(fontSize: 21.0),
+              style: const TextStyle(fontSize: 21.0),
             ),
             onTap: () {
               Navigator.pop(context);

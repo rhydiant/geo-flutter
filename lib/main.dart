@@ -9,7 +9,7 @@ import 'package:geo/widgets/geo_app_widget.dart';
 ///
 
 void main() {
-  GeoKeys.load().then((value) {
+  GeoKeys.load().then((GeoKeys value) {
     MapView.setApiKey(value.googleMapsApiKey);
   });
 

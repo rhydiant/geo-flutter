@@ -17,30 +17,30 @@ class GeoDetail extends StatelessWidget {
 
   const GeoDetail({Key key, @required this.location}) : super(key: key);
 
-  List _buildListWigets() {
-    List<Widget> children = List();
+  List<dynamic> _buildListWigets() {
+    final List<Widget> children = [];
 
     children.add(Container(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         top: standardPadding,
         left: standardPadding,
       ),
       child: Text(
         '${location.name}',
-        style: TextStyle(fontSize: 21.0),
+        style: const TextStyle(fontSize: 21.0),
       ),
     ));
 
     children.add(Container(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         left: standardPadding,
         top: standardHalfPadding,
       ),
-      child: GeoRating(score: 2),
+      child: const GeoRating(score: 2),
     ));
 
     children.add(Container(
-      padding: EdgeInsets.all(standardPadding),
+      padding: const EdgeInsets.all(standardPadding),
       child: GeoMapImage(
         title: location.name,
         long: location.long,
@@ -51,16 +51,16 @@ class GeoDetail extends StatelessWidget {
 
     children.add(
       Container(
-          padding: EdgeInsets.all(standardPadding),
-          child: Text(
+          padding: const EdgeInsets.all(standardPadding),
+          child: const Text(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at convallis neque, vitae scelerisque justo. In vel auctor lectus. Fusce quis neque nec dolor facilisis pharetra. Vivamus blandit, magna id lacinia scelerisque, justo est varius tellus, eu suscipit odio mi id ante.')),
     );
 
     children.add(Container(
-      padding: EdgeInsets.all(standardPadding),
-      child: Text(
+      padding: const EdgeInsets.all(standardPadding),
+      child: const Text(
         'Nearby',
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 18.0,
         ),
       ),
@@ -68,7 +68,7 @@ class GeoDetail extends StatelessWidget {
 
     children.add(Container(
       height: 100.0,
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
           left: standardPadding,
           right: standardPadding,
           bottom: standardPadding),
@@ -76,33 +76,33 @@ class GeoDetail extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.only(right: standardHalfPadding),
-            child: Image(
-              image: AssetImage('assets/images/location-1.jpg'),
+            margin: const EdgeInsets.only(right: standardHalfPadding),
+            child: const Image(
+              image: const AssetImage('assets/images/location-1.jpg'),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(right: standardHalfPadding),
-            child: Image(
-              image: AssetImage('assets/images/location-2.jpg'),
+            margin: const EdgeInsets.only(right: standardHalfPadding),
+            child: const Image(
+              image: const AssetImage('assets/images/location-2.jpg'),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(right: standardHalfPadding),
-            child: Image(
-              image: AssetImage('assets/images/location-3.jpg'),
+            margin: const EdgeInsets.only(right: standardHalfPadding),
+            child: const Image(
+              image: const AssetImage('assets/images/location-3.jpg'),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(right: standardHalfPadding),
-            child: Image(
-              image: AssetImage('assets/images/location-4.jpg'),
+            margin: const EdgeInsets.only(right: standardHalfPadding),
+            child: const Image(
+              image: const AssetImage('assets/images/location-4.jpg'),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(right: standardHalfPadding),
-            child: Image(
-              image: AssetImage('assets/images/location-5.jpg'),
+            margin: const EdgeInsets.only(right: standardHalfPadding),
+            child: const Image(
+              image: const AssetImage('assets/images/location-5.jpg'),
             ),
           ),
         ],
@@ -125,7 +125,7 @@ class GeoDetail extends StatelessWidget {
             ),
           ),
           SliverList(
-            delegate: (SliverChildListDelegate(_buildListWigets())),
+            delegate: SliverChildListDelegate(_buildListWigets()),
           ),
         ],
       ),

@@ -12,7 +12,7 @@ import 'package:geo/models/geo_location.dart';
 class GeoClient {
   Future<List<GeoLocation>> fetchLocations(http.Client client) async {
     print('making http request');
-    final response = await client.get(
+    final http.Response response = await client.get(
         'https://willyweather-stub.getsandbox.com/v2/key/search/closest.json?id=193&distance=km&weatherTypes=swell');
 
     print('got http response');
