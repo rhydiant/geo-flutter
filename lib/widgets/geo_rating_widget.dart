@@ -23,11 +23,11 @@ class GeoRating extends StatelessWidget {
         _Circle(active: score > 3),
         _Circle(active: score > 4),
         Container(
-          padding: EdgeInsets.only(left: 4.0),
+          padding: const EdgeInsets.only(left: 4.0),
           child: Text(
             '$score.0/5.0',
             textDirection: TextDirection.ltr,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 11.0,
               fontWeight: FontWeight.w400,
               color: GeoColors.darkGrey,
@@ -49,9 +49,9 @@ class _Circle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       key: active
-          ? Key('GeoRating._Circle.Active.Key')
-          : Key('GeoRating._Circle.Inactive.Key'),
-      margin: EdgeInsets.all(3.0),
+          ? const Key('GeoRating._Circle.Active.Key')
+          : const Key('GeoRating._Circle.Inactive.Key'),
+      margin: const EdgeInsets.all(3.0),
       width: size,
       height: size,
       decoration: BoxDecoration(

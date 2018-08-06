@@ -15,7 +15,7 @@ void main() {
   group('GeoClient', () {
     test('should parse valid JSON response without error', () async {
       // stub the http response
-      final mockClient = MockClient();
+      final MockClient mockClient = MockClient();
       when(mockClient.get(
               'https://willyweather-stub.getsandbox.com/v2/key/search/closest.json?id=193&distance=km&weatherTypes=swell'))
           .thenAnswer((_) async => http.Response('''

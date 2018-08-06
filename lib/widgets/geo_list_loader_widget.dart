@@ -23,11 +23,13 @@ class GeoListLoader extends StatelessWidget {
     return Scaffold(
       body: FutureBuilder<List<GeoLocation>>(
         future: geoClient.fetchLocations(http.Client()),
-        builder: (context, snapshot) {
+        builder:
+            (BuildContext context, AsyncSnapshot<List<GeoLocation>> snapshot) {
           if (snapshot.hasError) {
             return GeoError(
               action: () {
-                print("todo: rety");
+                // TODO: rety logic
+                print('todo: rety');
               },
             );
           }

@@ -19,15 +19,15 @@ class GeoError extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text(
-            "Failed to load locations",
+          const Text(
+            'Failed to load locations',
             textDirection: TextDirection.ltr,
             textAlign: TextAlign.center,
           ),
           Container(
-            margin: EdgeInsets.all(standardPadding),
+            margin: const EdgeInsets.all(standardPadding),
             child: RaisedButton(
-              child: Text('retry'),
+              child: const Text('retry'),
               onPressed: () {
                 action();
               },
