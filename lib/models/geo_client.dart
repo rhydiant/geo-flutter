@@ -17,7 +17,7 @@ class GeoClient {
 
     print('got http response');
     if (response.statusCode == 200) {
-      final decoded = json.decode(response.body);
+      final dynamic decoded = json.decode(response.body);
 
       final List<GeoLocation> result = [];
 
