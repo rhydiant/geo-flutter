@@ -51,6 +51,8 @@ flutter:
     - assets/images/location-7.jpg
     - assets/images/location-8.jpg
     - assets/images/location-9.jpg
+    # secrets
+    - assets/keys.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

@@ -28,40 +28,51 @@ class GeoMapImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var staticMapProvider = new StaticMapProvider(googleMapsApiKey);
-    return Stack(
-      fit: StackFit.passthrough,
-      children: <Widget>[
-        Container(
-          height: height,
-          child: CachedNetworkImage(
-            placeholder: GeoActivityIndicator(),
-            fit: BoxFit.cover,
-            imageUrl: staticMapProvider
-                .getStaticUri(
-                  Location(lat, long),
-                  12,
-                  height: 400,
-                  mapType: StaticMapViewType.roadmap,
-                )
-                .toString(),
-          ),
-        ),
-        Positioned(
-          bottom: 8.0,
-          right: 8.0,
-          child: FloatingActionButton(
-            mini: true,
-            onPressed: () {},
-            child: IconButton(
-              onPressed: () {
-                _showMap(title: title, long: long, lat: lat);
-              },
-              icon: Icon(Icons.fullscreen),
-            ),
-          ),
-        ),
-      ],
+    return FutureBuilder(
+      future: GeoKeys.load(),
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          final staticMapProvider = StaticMapProvider(
+            (snapshot.data as GeoKeys).googleMapsApiKey,
+          );
+          return Stack(
+            fit: StackFit.passthrough,
+            children: <Widget>[
+              Container(
+                height: height,
+                child: CachedNetworkImage(
+                  placeholder: GeoActivityIndicator(),
+                  fit: BoxFit.cover,
+                  imageUrl: staticMapProvider
+                      .getStaticUri(
+                        Location(lat, long),
+                        12,
+                        height: 400,
+                        mapType: StaticMapViewType.roadmap,
+                      )
+                      .toString(),
+                ),
+              ),
+              Positioned(
+                bottom: 8.0,
+                right: 8.0,
+                child: FloatingActionButton(
+                  mini: true,
+                  onPressed: () {},
+                  child: IconButton(
+                    onPressed: () {
+                      _showMap(title: title, long: long, lat: lat);
+                    },
+                    icon: Icon(Icons.fullscreen),
+                  ),
+                ),
+              ),
+            ],
+          );
+        } else {
+          return GeoActivityIndicator();
+        }
+      },
     );
   }
 

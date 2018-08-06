@@ -10,6 +10,7 @@
 .history
 .svn/
 android/key.properties
+assets/keys.json
 
 # IntelliJ related
 *.iml
