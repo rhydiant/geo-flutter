@@ -1,4 +1,4 @@
-# geo [![Build Status](https://travis-ci.org/rhydiant/geo-flutter.svg)](https://travis-ci.org/rhydiant/geo-flutter) [![Coverage Status](https://coveralls.io/repos/github/rhydiant/geo-flutter/badge.svg?branch=master)](https://coveralls.io/github/rhydiant/geo-flutter?branch=master)
+# geo-flutter [![Build Status](https://travis-ci.org/rhydiant/geo-flutter.svg)](https://travis-ci.org/rhydiant/geo-flutter) [![Coverage Status](https://coveralls.io/repos/github/rhydiant/geo-flutter/badge.svg?branch=master)](https://coveralls.io/github/rhydiant/geo-flutter?branch=master)
 
 A time-boxed evaluation of flutter.io, building out an iOS/Android app.
 
