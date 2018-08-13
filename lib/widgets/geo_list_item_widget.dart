@@ -34,12 +34,13 @@ class GeoListItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
-                child: Hero(
-              tag: location.imageUrl,
-              child: Image(
-                image: AssetImage(location.imageUrl),
+              child: Hero(
+                tag: location.imageUrl,
+                child: Image(
+                  image: AssetImage(location.imageUrl),
+                ),
               ),
-            )),
+            ),
             Padding(
               padding: EdgeInsets.only(
                 left: standardPadding,
