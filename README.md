@@ -23,7 +23,7 @@ In order to access Google Maps API `mv assets/keys.template.json assets/keys.jso
 
 ### Running the app
 
-Start a [simulator](https://github.com/rhydiant/geo-flutterio/wiki/Simulators) and do `flutter run`.
+Start a [simulator](https://github.com/rhydiant/geo-flutter/wiki/3.-Simulators) and do `flutter run`.
 
 To run on a connected device (with release optimizations):
 
